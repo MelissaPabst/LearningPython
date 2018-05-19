@@ -1,0 +1,674 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 current_time = int(input("What is the current time?"))\
+hours_to_wait = int(input("How many hours will you wait for the alarm to sound?"))\
+\
+clock_hour = (current_time + hours_to_wait) % 24\
+\
+\
+print("When the alarm goes off, the clock will read:", clock_hour)\
+           \
+\'97\
+\
+P = 10000\
+n = 12\
+r = 0.08\
+\
+t = float(input("How many years will the money compound?"))\
+\
+amount = (P)*((1+(r/n))**(n*t))\
+\
+print("The final amount after", t, "years will be $", amount)\
+         \
+\'97\
+\
+r = float(input("What is the radius of your circle?"))\
+\
+area = 3.14*(r**2)\
+\
+print("The area of a circle with a radius of", r, "is", area)\
+\
+\'97\
+\
+spins = input("How many times did you spin? (Enter a negative number for counter-clockwise spins) ")\
+\
+degrees = (float(spins) * 360) % 360\
+\
+print("You are facing", degrees, "degrees relative to north")\
+\
+\'97\
+\
+num_touchdowns = input("How many touchdowns were scored? ")\
+num_field_goals = input("How many field goals were scored? ")\
+td_points = input("How many points is a touchdown worth?")\
+fg_points = input("How many points is a field goal worth?")\
+\
+total_score = int(td_points) * int(num_touchdowns) + int(fg_points) * int(num_field_goals)\
+\
+print("The team has", total_score, "points")\
+\
+\'97\
+\
+clicks = int(input("How many clicks has the dial been turned?"))\
+\
+clicks_diff = clicks % 50 \
+\
+temperature = (40 + clicks_diff) \
+print("The temperature is", temperature)\
+\
+\'97\
+\
+#ask what day the vacation starts\
+starting_day = int(input("If Sunday = 0, and so on, from 0 - 6, what day number will your vacation start on?"))\
+\
+#ask how long they will be gone\
+days_away = int(input("How many days wil you be gone?"))\
+\
+#compute the day of return\
+return_day = (starting_day + days_away) % 7\
+\
+#print the day of return\
+print("You will return on", return_day)\
+\
+\'97\
+\
+import turtle\
+background = input("What color would you like for a background? Grey or Cyan?")\
+\
+wn = turtle.Screen()\
+wn.bgcolor(background)        # set the window background color\
+\
+tess = turtle.Turtle()\
+tess_color = input("What color would you like for tess to be? Pink or Red?")\
+tess.color(tess_color)              # make tess blue\
+tess_pensize = int(input("What size would you like to make tess? (Enter a number)"))\
+tess.pensize(tess_pensize)                 # set the width of her pen\
+\
+tess.forward(150)\
+tess.left(120)\
+tess.forward(150)\
+\
+wn.exitonclick() \
+\
+\'97\
+\
+import turtle\
+wn = turtle.Screen()             # Set up the window and its attributes\
+wn.bgcolor("lightgreen")\
+\
+\
+tess = turtle.Turtle()           # create tess and set some attributes\
+tess.color("hotpink")\
+tess.pensize(5)\
+\
+alex = turtle.Turtle()           # create alex\
+\
+tess.forward(80)                 # Let tess draw an equilateral triangle\
+tess.left(120)\
+tess.forward(80)\
+tess.left(120)\
+tess.forward(80)\
+tess.left(120)                   # complete the triangle\
+\
+tess.right(180)                  # turn tess around\
+tess.forward(80)                 # move her away from the origin\
+\
+alex.forward(50)                 # make alex draw a square\
+alex.left(90)\
+alex.forward(50)\
+alex.left(90)\
+alex.forward(50)\
+alex.left(90)\
+alex.forward(50)\
+alex.left(90)\
+\
+wn.exitonclick()\
+\
+\'97\
+\
+number = int(input("Please enter an integer between 1 and 1000"))\
+\
+for i in range (number):\
+    print("We like Python's turtles!")\
+\
+\'97\
+\
+for i in range (99, 1, -1):\
+    print( i, "bottles of beer on the wall,", i, "bottles of beer. You take one down, pass it around,", i -1, "bottles of beer on the wall.")\
+\
+print("1 bottle of beer on the wall, 1 bottle of beer. You take one down, pass it around, and now there's no bottles of beer on the wall.")\
+\
+\
+\'97\
+\
+for i in range(0, 51, 2):\
+    print(i)\
+\
+__\
+\
+for month in ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]:\
+    print("One of the months of the year is", month)\
+\
+__\
+\
+import turtle\
+wn = turtle.Screen()\
+wn.bgcolor("black")\
+\
+Melissa = turtle.Turtle()\
+Melissa.color("hotpink")\
+Melissa.shape("circle")\
+\
+for i in range(3):\
+    Melissa.forward(100)\
+    Melissa.left(120)\
+    \
+Bob = turtle.Turtle()\
+Bob.color("lime")\
+Bob.shape("arrow")\
+\
+for i in range(4):\
+    Bob.forward(150)\
+    Bob.left(90)\
+\
+Mikey = turtle.Turtle()\
+Mikey.color("red")\
+Mikey.shape("turtle")\
+\
+for i in range(6):\
+    Mikey.forward(45)\
+    Mikey.left(360/6)\
+\
+Abby = turtle.Turtle()\
+Abby.color("orange")\
+Abby.shape("square")\
+\
+for i in range(8):\
+    Abby.forward(25)\
+    Abby.left(369/8)\
+    \
+wn.exitonclick()\
+\
+\'97\
+\
+number_sides = int(input("Let's build a regular polygon. How many sides will it have?"))\
+side_length = float(input("What are the lengths of the sides?"))\
+side_color = input("What color are the sides to be drawn in?")\
+fill_color = input("What is the color of the polygon?")\
+\
+__\
+\
+import turtle\
+wn = turtle.Screen()\
+\
+pirate = turtle.Turtle()\
+\
+pirate.penup()\
+pirate.forward(100)\
+pirate.pendown()\
+\
+for angle in [160, -43, 270, -97, -43, 200, -940, 17, -86]:\
+    pirate.left(angle)\
+    pirate.forward(100)\
+    \
+wn.exitonclick()\
+\
+\'97\
+\
+import turtle\
+wn = turtle.Screen()\
+\
+star = turtle.Turtle()\
+\
+for i in range(5):\
+    star.forward(100)\
+    star.right(144)\
+\
+\'97\
+\
+import turtle\
+wn = turtle.Screen()\
+wn.bgcolor("lime")\
+\
+tommy = turtle.Turtle()\
+tommy.shape("turtle")\
+tommy.color("blue")\
+tommy.speed(20)\
+tommy.penup()\
+\
+tommy.stamp()\
+for hours in range(12):\
+    tommy.forward(120)\
+    tommy.pendown()\
+    tommy.forward(10)\
+    tommy.penup()\
+    tommy.forward(20)\
+    tommy.stamp()\
+    tommy.forward(-150)\
+    tommy.right(360/12)\
+    \
+wn.exitonclick()\
+\
+\'97\
+\
+import turtle\
+wn = turtle.Screen()\
+wn.bgcolor("black")\
+\
+picture = turtle.Turtle()\
+picture.color("HotPink", "blue")\
+picture.hideturtle()\
+picture.pensize(0.5)\
+picture.speed(20)\
+\
+picture.begin_fill()\
+for i in range (200):\
+    picture.forward(i)\
+    picture.right(110)\
+\
+picture.end_fill()\
+\
+wn.exitonclick()\
+\
+\'97\
+\
+import turtle\
+wn = turtle.Screen()\
+\
+Lisa = turtle.Turtle()\
+\
+x = Lisa\
+\
+print(type(x))\
+print(type(Lisa))\
+\
+\'97\
+\
+import turtle\
+wn = turtle.Screen()\
+\
+num_legs = int(input("How many legs will your sprite have?"))\
+\
+sprite = turtle.Turtle()\
+sprite.shape("circle")\
+sprite.hideturtle()\
+\
+for i in range (num_legs):\
+    sprite.forward(150)\
+    sprite.forward(-150)\
+    sprite.left(360/num_legs)\
+    \
+wn.exitonclick() \
+ \
+\'97\
+\
+import random\
+\
+for i in range(10):\
+    print(random.randrange(0, 20))\
+\
+\'97\
+\
+import random\
+\
+for i in range(10):\
+    print(random.randrange(25, 35))\
+\
+\'97\
+\
+import math\
+\
+side1 = 3\
+side2 = 4\
+hypotenuse = math.hypot(side1,side2)\
+print(hypotenuse)\
+\
+\'97\
+\
+import math\
+\
+approx_pi = 355/113\
+print(approx_pi)\
+\
+print(math.pi)\
+\
+\'97\
+\
+nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]\
+\
+for i in nums:\
+    print(i)\
+for i in nums:\
+    print("The square of", i, "is", i**2)\
+\
+\'97\
+\
+import turtle\
+import random\
+\
+win = turtle.Screen()\
+\
+# create 2 turtles\
+zach = turtle.Turtle()\
+jesse = turtle.Turtle()\
+\
+# speed them up!\
+zach.speed(10)\
+jesse.speed(10)\
+\
+jesse.color("green")\
+zach.color("orange")\
+\
+jesse.penup()\
+zach.penup()\
+jesse.goto(-100, 0)\
+zach.goto(-100, 0)\
+jesse.pendown()\
+zach.pendown()\
+\
+# make them walk randomly, loop variable represents distance to travel forward\
+for distance in range(0,50,2): # generates [0,2,4,6,8,10,12,...46,48]\
+\
+    # create a random angle for each turtle\
+    zach_angle = random.randrange(0,181)\
+    jesse_angle = random.randrange(0,181)\
+\
+    # turn each turtle in that random direction\
+    zach.left(zach_angle)\
+    jesse.left(jesse_angle)\
+\
+    # move each turtle forward by distance\
+    zach.forward(distance)\
+    jesse.forward(distance)\
+\
+#doug code\
+# for i in range(10):\
+    #randomly choose a direction\
+    \
+    #direction = random.randrange(-45, 45)\
+    #direction2 = random.randrange(-45, 45)\
+        \
+    #jesse.left(direction)\
+    #zach.left(direction2)\
+    \
+    #move in that direction\
+    \
+    #distance = random.randrange(25, 25)\
+    #distance2 = random.randrange(25, 25)\
+    \
+    #jesse.forward(distance)\
+    #zach.forward(distance2)\
+    \
+win.exitonclick()    \
+\
+\
+\'97\
+\
+import turtle              # 1. import the modules\
+import random\
+wn = turtle.Screen()       # 2. Create a screen\
+wn.bgcolor('lightblue')\
+\
+lance = turtle.Turtle()    # 3. Create two turtles\
+andy = turtle.Turtle()\
+lance.color('red')\
+andy.color('blue')\
+lance.shape('turtle')\
+andy.shape('turtle')\
+\
+andy.up()                  # 4. Move the turtles to their starting point\
+lance.up()\
+andy.goto(-100,20)\
+lance.goto(-100,-20)\
+\
+# your code goes here\
+\
+# 1. single call to forward\
+#lance_distance = random.randrange(0, 200)\
+#andy_distance = random.randrange(0, 200)\
+\
+#lance.forward(lance_distance)\
+#andy.forward(andy_distance)\
+\
+#OR\
+\
+#lance.forward(random.randrange(100))\
+#andy.forward(random.randrange(100))\
+\
+#2. for loop\
+\
+turns = random.randrange(0, 25)\
+\
+for distance in range(turns):\
+    lance.forward(random.randrange(0, 25))\
+    andy.forward(random.randrange(0, 25))\
+    \
+#OR\
+\
+#for distance in range(random.randrage(0, 25))\
+    #lance.forward(random.randrange(0, 25))\
+    #andy.forward(random.randrange(0, 25))\
+                      \
+# 3. other\
+\
+#for turtle in ["lance", "andy"]:\
+    #lance.forward(random.randrange(0, 200))\
+    #andy.forward(random.randrange(0, 200))\
+                       \
+wn.exitonclick()\
+\
+__\
+\
+import turtle\
+\
+def draw_square(t, sz):\
+    """Get turtle t to draw a square with sz side"""\
+\
+    for i in range(4):\
+        t.forward(sz)\
+        t.left(90)\
+\
+def main():\
+    wn = turtle.Screen()\
+    wn.bgcolor("lightgreen")\
+\
+    alex = turtle.Turtle()\
+    alex.color("hotpink")\
+    alex.pensize(4)\
+    \
+    for i in range(5):\
+        draw_square(alex,20)\
+        alex.penup()\
+        alex.forward(40)\
+        alex.pendown()\
+\
+    wn.exitonclick()\
+\
+if __name__ == "__main__":\
+    main()\
+\
+\'97\
+\
+import turtle\
+\
+def draw_square(t, sz):\
+    \
+    for i in range(4):\
+        t.forward(sz)\
+        t.left(90)\
+\
+        \
+def main ():        \
+    window = turtle.Screen()\
+    window.bgcolor("lightgreen")\
+    pinky = turtle.Turtle()\
+    pinky.color("hotpink")\
+    pinky.pensize(3)\
+    \
+    size = 20\
+    x = 0\
+    y = 0\
+    for i in range(5):\
+        draw_square(pinky, size)\
+        size = size + 20\
+        pinky.penup()\
+        x = x - 10\
+        y = y - 10\
+        pinky.goto(x, y)\
+        pinky.pendown()\
+\
+\
+    window.exitonclick()\
+    \
+    \
+if __name__ == "__main__":\
+    main()\
+\
+\'97\
+\
+import turtle\
+\
+def draw_poly(t, sides, side_length):\
+    for i in range(sides):\
+        t.forward(side_length)\
+        t.left(360/sides)\
+    \
+    \
+def main():\
+    win = turtle.Screen()\
+    win.bgcolor("lightgreen")\
+    tess = turtle.Turtle()\
+    tess.color("hotpink")\
+    \
+    draw_poly(tess, 8, 50)\
+    \
+    win.exitonclick()\
+    \
+    \
+if __name__ == "__main__":\
+    main()  \
+\
+\'97\
+\
+import turtle, sys\
+\
+def draw_spiral(t, angle, length):\
+        t.right(angle)\
+        t.forward(length)\
+        \
+def main():\
+    win = turtle.Screen()\
+    win.bgcolor("lightgreen")\
+    spiral = turtle.Turtle()\
+    spiral.color("hotpink")\
+    sys.setExecutionLimit(35000)\
+    \
+    length = 5\
+    angle = 90\
+    \
+    for i in range(100):\
+        draw_spiral(spiral, angle, length)\
+        length = length + 3\
+       \
+    win.exitonclick()\
+    \
+if __name__ == "__main__":   \
+    main()    \
+\
+\'97\
+\
+import turtle, sys\
+\
+def draw_spiral(t, angle, length):\
+        t.right(angle)\
+        t.forward(length)\
+        \
+def main():\
+    win = turtle.Screen()\
+    win.bgcolor("lightgreen")\
+    spiral = turtle.Turtle()\
+    spiral.color("hotpink")\
+    sys.setExecutionLimit(35000)\
+    \
+    length = 5\
+    angle = 88\
+    \
+    for i in range(100):\
+        draw_spiral(spiral, angle, length)\
+        length = length + 3\
+       \
+    win.exitonclick()\
+    \
+if __name__ == "__main__":   \
+    main()    \
+\
+\'97\
+\
+import turtle, sys\
+\
+sys.setExecutionLimit(35000)\
+\
+def draw_spiral(t, angle):\
+    length = 1\
+    for i in range(100):\
+        t.right(angle)\
+        t.forward(length)\
+        length = length + 3\
+        \
+def main():\
+    win = turtle.Screen()\
+    win.bgcolor("lightgreen")\
+    spiral = turtle.Turtle()\
+    spiral.color("blue")\
+    spiral.speed(0)\
+    \
+    draw_spiral(spiral, 90)\
+    spiral.goto(0, 0)\
+    draw_spiral(spiral, 88)\
+           \
+    win.exitonclick()\
+    \
+if __name__ == "__main__":   \
+    main()    \
+\
+\'97\
+\
+MISSING #%\
+\
+\'97\
+\
+def sum_to(n):\
+    result = (n * (n + 1)/2)\
+    return result\
+\
+print(sum_to(10))\
+\
+\'97\
+\
+import turtle\
+\
+def draw_star(t):\
+    for i in range(5):\
+        t.left(144)\
+        t.forward(100)\
+        \
+def main():\
+    win = turtle.Screen() \
+    star = turtle.Turtle() \
+    draw_star(star)\
+\
+    win.exitonclick()\
+    \
+    \
+if __name__ == "__main__":\
+    main()  \
+\
+\'97\
+\
+\
+\
+}
